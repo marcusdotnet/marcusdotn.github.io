@@ -1,0 +1,9 @@
+.experience_container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 100%;
+	height: fit-content;
+	align-items: center;
+	margin-top: 5rem;
+}

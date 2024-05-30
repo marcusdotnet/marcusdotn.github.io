@@ -1,0 +1,49 @@
+.filter_container {
+    display: flex;
+    gap: 1.25rem;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 1em;
+}
+
+.project_container {
+	display: grid;
+    grid-template-columns: auto auto auto;
+	column-gap: 1.25rem;
+	row-gap: 2.5rem;
+	overflow-y: auto;
+	margin-top: 1.5rem;
+	padding: 2rem;
+}
+
+.filter_by {
+    margin-right: -10px;
+}
+
+.filter_options_container {
+    margin-left: 3rem;
+    display: flex;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .filter_container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .filter_options_container {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+        justify-items: center;
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    .filter_by {
+        margin: 0;
+    }
+}

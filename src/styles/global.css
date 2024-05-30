@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+:root {
+    --primary_font: "Inter";
+    --mono-font: "Fira Mono";
+    --primary-color: rgb(162, 0, 255);
+    --background-color: rgb(16, 5, 31);
+    --neutral-color: rgb(43, 43, 43);
+}
+
+body {
+    color: white;
+    font-family: var(--mono-font), Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inter {
+    font-family: var(--primary_font);
+}
+
+.mono {
+    font-family: var(--mono-font);
+}
+
+#page-container {
+    z-index: -1;
+}
+
+#page-container section {
+    width: 100%;
+}
+
+.nav-unfocused {
+    color: gray;
+}
+
+.button {
+    padding: 1rem 2.5rem;
+    border-radius: 3rem;
+    transition-duration: 230ms;
+}
+
+.button:active {
+    filter: brightness(90%);
+}
+
+
+.transparentWhiteborder {
+    border: solid 2px white;
+}
+
+.transparentWhiteborder:hover {
+    background-color: var(--primary-color);
+}
+
+.neutral {
+    background-color: var(--neutral-color);
+    color: white;
+}
+
+.neutral:hover {
+    background-color: var(--primary-color);
+    transition-duration: 200ms;
+}
+
+.neutral:active {
+    filter: brightness(80%);
+}
+
+.filledPrimary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.filledPrimary:hover {
+    background-color: var(--primary-color);
+    filter: brightness(90%);
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea {
+    background-color: transparent;
+    border: solid 0.15rem rgb(100, 100, 100);
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #381b54; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    :root {
+        font-size: 16px;
+    }
+  }
+  
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    :root {
+        font-size: 13px;
+    }
+  }

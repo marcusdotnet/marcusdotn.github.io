@@ -1,0 +1,39 @@
+.navbar {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+}
+
+.link {
+    color: white;
+    padding: 0.1em 1em;
+    transition-duration: 300ms;
+    font-size: 1.15rem;
+    font-weight: 500;
+    border-bottom: solid 2px transparent;
+}
+
+.active_link {
+    border-color: var(--primary-color);
+}
+
+.alt_link {
+    color: rgb(212, 118, 255)
+}
+
+.unfocused_link {
+    color: rgb(116, 116, 116);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.75rem;
+        background-color: rgba(10, 10, 15, 0.5);
+    }
+}
