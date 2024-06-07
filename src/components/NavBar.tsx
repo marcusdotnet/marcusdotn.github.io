@@ -84,11 +84,10 @@ export default function NavBar(props: NavBarProps) {
         </nav>);
 
 
-
     return (
     <nav className={styles.navbar}>
         <NavLogo className="ml-10" />
-        <div className="ml-56 items-center flex flex-row">
+        <div className={styles.navbar_links_container}>
             <NavLinks />
         </div>
     </nav>)

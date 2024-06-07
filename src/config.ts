@@ -1,10 +1,14 @@
 import { ReactNode } from "react";
 import placeholderImg from "./images/placeholder.png";
 
-import superPumpkin1 from "./images/sp_1.png";
-import superPumpkin2 from "./images/sp_2.png";
-import superPumpkin3 from "./images/sp_3.png";
-import superPumpkin4 from "./images/sp_4.png";
+import superPumpkin1 from "./images/projects/sp_1.png";
+import superPumpkin2 from "./images/projects/sp_2.png";
+import superPumpkin3 from "./images/projects/sp_3.png";
+import superPumpkin4 from "./images/projects/sp_4.png";
+
+import tthkApi1 from "./images/projects/tthkapi_1.png";
+import tthkApi2 from "./images/projects/tthkapi_2.png";
+import tthkApi3 from "./images/projects/tthkapi_3.png";
 
 import htmlLogo from "./images/logo_html.png";
 import desktopLogo from "./images/logo_desktop.png";
@@ -49,6 +53,14 @@ const config: {
             description: `Super Pumpkin is a game written entirely in Lua, using the LÖVE framework. The game obviously took some inspiration from Super Mario but every piece of content for the game was created from scratch, to have just a little bit of originality.
             Honestly it's just some mess I cooked up for TTHK's first Game Jam event and I had fun making it, even if I could've done it way better now that I think about it.`,
             images: [superPumpkin1, superPumpkin2, superPumpkin3, superPumpkin4]
+        },
+        {
+            title: "TTHK Timetable API",
+            category: "Web Development",
+            link: "https://github.com/marcusdotn/tthk-api",
+            description: `This is the unofficial, open source API to retrieve public timetable related information for Tallinn Industrial Education Center.
+            Timetable data is fetched from EduPage's public endpoints at configurable intervals and interpreted to make it easier to work with without being authenticated.`,
+            images: [tthkApi1, tthkApi2, tthkApi3]
         }
     ],
     SKILLS: [

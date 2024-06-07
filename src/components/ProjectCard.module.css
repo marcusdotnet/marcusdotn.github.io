@@ -1,6 +1,6 @@
 .projectcard {
     display: flex;
-    width: 18em;
+    width: 22em;
     height: 16em;
     flex-direction: column;
     transition-duration: 200ms;
