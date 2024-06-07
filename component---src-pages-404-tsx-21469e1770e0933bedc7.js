@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_portfolio=self.webpackChunkmy_portfolio||[]).push([[218],{2513:function(t,e,n){n.r(e),n.d(e,{Head:function(){return u},default:function(){return r}});var o=n(7294);const u=()=>o.createElement("title",null,"< my portfolio />");function r(){return o.createElement("div",null,"Not found")}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-21469e1770e0933bedc7.js.map
