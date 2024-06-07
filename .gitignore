@@ -1,3 +1,6 @@
 node_modules/
+public/
 .cache/
 src/gatsby-types.d.ts
+src/css.d.ts
+cursors.svg

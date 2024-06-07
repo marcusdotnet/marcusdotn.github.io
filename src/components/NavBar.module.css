@@ -5,6 +5,17 @@
 	flex-direction: row;
 }
 
+.navbar_alt {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+    background-color: rgba(10, 10, 15, 0.5);
+}
+
 .link {
     color: white;
     padding: 0.1em 1em;

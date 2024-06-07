@@ -35,3 +35,10 @@
         height: fit-content;
     }
 }
+
+/* Mobile landscape */
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+    .skillcard {
+        height: 100%;
+    }
+}

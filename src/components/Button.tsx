@@ -2,28 +2,28 @@ import React, { ReactNode } from "react";
 
 
 interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-    btnType: "transparentWhiteborder" | "filledPrimary" | "neutral"
+    BtnType: "transparentWhiteborder" | "filledPrimary" | "neutral"
     onClick?: React.MouseEventHandler<HTMLButtonElement>
-    gotoSectionId?: string
+    GotoSectionId?: string
+    className?: string
+    style?: React.CSSProperties
     children?: ReactNode
 }
 
-export class Button extends React.Component<ButtonProps> {
-    render(): React.ReactNode {
-        const props: ButtonProps = {} as ButtonProps;
-        Object.assign(props, this.props);
-        props.className = `${props.btnType} button ${props?.className}`;
+export default function Button({BtnType, onClick, GotoSectionId, className="", style={}, children}: ButtonProps) {
+    const clickHandler: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+        if (GotoSectionId)
+            window.location.hash = GotoSectionId;
 
-        const clickHandler: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-            if (props.gotoSectionId)
-                window.location.hash = props.gotoSectionId;
+        if (onClick)
+            onClick(e);
+    };
     
-            if (props.onClick)
-                props.onClick(e);
-        };
-
-        return <button {...props} onClick={clickHandler}>
-            {this.props.children}
-        </button>
-    }
+    return <button 
+    className={`${BtnType} button ${className}`}
+    onClick={clickHandler}
+    style={style}
+    >
+        {children}
+    </button>
 }

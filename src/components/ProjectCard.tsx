@@ -1,7 +1,6 @@
 import React from "react";
 import * as styles from "./ProjectCard.module.css";
-import { Project } from "../config";
-import { isMobile } from "react-device-detect";
+import config, { Project } from "../config";
 
 interface ProjectCardProps {
     project: Project
@@ -10,7 +9,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({project, onClick}: ProjectCardProps) {
     const imageSources = project.images;
-    const thumbnailSrc = imageSources.length != 0 ? imageSources[0] : "/static/img/placeholder.jpeg";
+    const thumbnailSrc = imageSources.length != 0 ? imageSources[0] : config.PLACEHOLDER_IMG;
 
     return <div className={styles.projectcard} onClick={onClick}>
         <img className={styles.projectcard_image} src={thumbnailSrc} alt="Project card image" /> 

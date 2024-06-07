@@ -1,6 +1,6 @@
 import React from "react";
 import CodeSymbol from "../../components/CodeSymbol";
-import {Button} from "../../components/Button";
+import Button from "../../components/Button";
 import Section, { SectionHeader } from "../../components/Section";
 
 export default function IntroSection() {
@@ -16,7 +16,7 @@ export default function IntroSection() {
 
             <p>full-stack developer, app dev & game enthusiast</p>
 
-            <Button className="mt-16" btnType="transparentWhiteborder" gotoSectionId="skills">GET TO KNOW ME</Button>
+            <Button className="mt-16" BtnType="transparentWhiteborder" GotoSectionId="skills">GET TO KNOW ME</Button>
         </div>
     </Section> 
 }

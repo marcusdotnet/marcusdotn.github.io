@@ -1,33 +1,23 @@
-export interface Project {
-    title: string
-    category: string
-    description?: string
-    link?: string
-    images: string[]
-}
+import { ReactNode } from "react";
+import placeholderImg from "./images/placeholder.png";
 
-export interface Experience {
-    title: string
-    start: string
-    end: string
-    description?: string
-    skills: string[]
-    isAlt?: boolean
-}
+import superPumpkin1 from "./images/sp_1.png";
+import superPumpkin2 from "./images/sp_2.png";
+import superPumpkin3 from "./images/sp_3.png";
+import superPumpkin4 from "./images/sp_4.png";
 
-export interface NavLink {
-    text: string
-    sectionId: string
-    isDefault?: boolean
-}
+import htmlLogo from "./images/logo_html.png";
+import desktopLogo from "./images/logo_desktop.png";
+import figmaLogo from "./images/logo_figma.png";
 
-interface Config {
+
+const config: {
     NAV_LINKS: NavLink[]
     PROJECTS: Project[]
+    SKILLS: Skill[]
     EXPERIENCE: Experience[]
-}
-
-const config: Config = {
+    PLACEHOLDER_IMG: string
+} = {
     NAV_LINKS: [
         {
             text: "home",
@@ -53,31 +43,29 @@ const config: Config = {
     ],
     PROJECTS: [
         {
-            title: "Project A",
-            category: "Web Development",
-            images: []
-        },
-        {
-            title: "Project B",
-            category: "Web Development",
-            images: []
-        },
-        {
-            title: "Project C",
-            category: "Web Development",
-            images: []
-        },
-        {
-            title: "Project D",
-            category: "Web Development",
-            images: []
-        },
-        {
-            title: "Project E",
+            title: "Super Pumpkin",
             category: "Games",
-            link: "https://google.com",
-            description: "ksadqidqw qwkd jqw idq dqlwk dqwlk q qksadqidqw qwkd jqw idq dqlwk dqwlk q qksadqidqw qwkd jqw idq dqlwk dqwlk q qksadqidqw qwkd jqw idq dqlwk dqwlk q qksadqidqw qwkd jqw idq dqlwk dqwlk q qksadqidqw qwkd jqw idq dqlwk dqwlk q qksadqidqw qwkd jqw idq dqlwk dqwlk q q",
-            images: ["/static/img/placeholder.jpeg", "/static/img/placeholder.jpeg", "/static/img/placeholder.jpeg"]
+            link: "https://makud3v.itch.io/super-pumpkin",
+            description: `Super Pumpkin is a game written entirely in Lua, using the LÖVE framework. The game obviously took some inspiration from Super Mario but every piece of content for the game was created from scratch, to have just a little bit of originality.
+            Honestly it's just some mess I cooked up for TTHK's first Game Jam event and I had fun making it, even if I could've done it way better now that I think about it.`,
+            images: [superPumpkin1, superPumpkin2, superPumpkin3, superPumpkin4]
+        }
+    ],
+    SKILLS: [
+        {
+            title: "Full-stack Web Development",
+            titleIconSrc: htmlLogo,
+            content: "Experience in developing full-stack applications, primarily using ASP.NET, Next.js, Express.js and React"
+        },
+        {
+            title: "Cross-platform Application Development",
+            titleIconSrc: desktopLogo,
+            content: "Software should adapt to every platform - I can make that happen using Electron, .NET MAUI & Capacitor"
+        },
+        {
+            title: "UI/UX Design",
+            titleIconSrc: figmaLogo,
+            content: "Passionate about designing applications that look beautiful while also prioritizing the user experience"
         }
     ],
     EXPERIENCE: [
@@ -96,7 +84,40 @@ const config: Config = {
             skills: ["Life"],
             isAlt: true
         }     
-    ]
+    ],
+    PLACEHOLDER_IMG: placeholderImg
 }
+
+
+export interface Project {
+    title: string
+    category: string
+    description?: string
+    link?: string
+    images: string[]
+}
+
+export interface Experience {
+    title: string
+    start: string
+    end: string
+    description?: string
+    skills: string[]
+    isAlt?: boolean
+}
+
+export interface Skill {
+    title: string
+    titleIconSrc: string
+    content: string
+}
+
+export interface NavLink {
+    text: string
+    sectionId: string
+    isDefault?: boolean
+}
+
+
 
 export default config;

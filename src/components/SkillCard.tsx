@@ -1,20 +1,25 @@
 import React from "react";
 import * as styles from "./SkillCard.module.css";
 
-interface SkillCardProps extends React.HtmlHTMLAttributes<HTMLElement> {
-    titleIconSrc: string;
-    title: string;
-    content: string;
+interface SkillCardProps {
+    TitleIconSrc: string;
+    Title: string;
+    Content: string;
+    className?: string
+    style?: React.CSSProperties
 }
 
-export default function SkillCard(props: SkillCardProps) {
-    return <div {...props} className={`${styles.skillcard} ${props.className != undefined ? props.className : ""}`}>
+export default function SkillCard({TitleIconSrc, Title, Content, className="", style={}}: SkillCardProps) {
+    return <div 
+    className={`${styles.skillcard} ${className}`}
+    style={style}
+    >
         <h2>
-            <img src={props.titleIconSrc} alt={props.title} className={styles.titleicon} />
-            {props.title}
+            <img src={TitleIconSrc} alt={Title} className={styles.titleicon} />
+            {Title}
         </h2>
         <p>
-            {props.content}
+            {Content}
         </p>
     </div>
 }

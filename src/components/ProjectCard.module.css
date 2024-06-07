@@ -1,7 +1,7 @@
 .projectcard {
     display: flex;
     width: 18em;
-    height: auto;
+    height: 16em;
     flex-direction: column;
     transition-duration: 200ms;
 }
@@ -9,7 +9,7 @@
 .projectcard:hover {
     scale: 105%;
     filter: brightness(80%);
-    cursor: pointer;
+    cursor: var(--cursor_hover), auto;
 }
 
 .projectcard:active {
@@ -18,7 +18,7 @@
 
 .projectcard_image {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .projectcard_title_container {
@@ -44,19 +44,19 @@
 /* Mobile */
 @media (max-width: 768px) {
     .projectcard {
-        width: 14em !important;
-        min-width: 14em;
-        height: auto;
+        width: 15em !important;
+        height: 13em;
         scroll-snap-align: start;
     }
 
     .projectcard_image {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 
     .projectcard_title_container {
-        padding: 0.5rem;
+        height: fit-content;
+        padding: 0.7rem;
     }
 
     .projectcard_title {

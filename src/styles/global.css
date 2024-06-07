@@ -11,11 +11,16 @@
     --primary-color: rgb(162, 0, 255);
     --background-color: rgb(16, 5, 31);
     --neutral-color: rgb(43, 43, 43);
+
+    --cursor: url(../images/cursor.png);
+    --cursor_hover: url(../images/cursor_hover.png);
+    --cursor_active: url(../images/cursor_active.png);
 }
 
 body {
     color: white;
     font-family: var(--mono-font), Verdana, Geneva, Tahoma, sans-serif;
+    cursor: var(--cursor), auto;
 }
 
 .inter {
@@ -33,6 +38,27 @@ body {
 #page-container section {
     width: 100%;
 }
+
+button:hover, label:hover, a:hover {
+    cursor: var(--cursor_hover), auto;
+}
+
+input {
+    cursor: var(--cursor), auto;
+}
+
+input:focus {
+    cursor: var(--cursor), auto;
+}
+
+input:hover {
+    cursor: var(--cursor_hover), auto;
+}
+
+button:active {
+    cursor: var(--cursor_active), auto;
+}
+
 
 .nav-unfocused {
     color: gray;
@@ -88,6 +114,36 @@ input[type="text"], input[type="email"], input[type="number"], textarea {
     padding: 0.5rem;
 }
 
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+}
+
+.slideIn {
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+  
+.slideOut {
+    animation-name: slideOut;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -117,8 +173,8 @@ input[type="text"], input[type="email"], input[type="number"], textarea {
   }
   
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     :root {
         font-size: 13px;
     }
-  }
+}

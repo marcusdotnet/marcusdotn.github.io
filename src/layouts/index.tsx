@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar";
 import React, { createContext, useEffect, useState } from "react";
-
+import { isMobile } from "react-device-detect";
 
 
 export const SectionContext = createContext("intro");

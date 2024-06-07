@@ -3,9 +3,9 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `my-portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://marcusdotn.github.io`
   },
-  pathPrefix: "./portfolio",
+  pathPrefix: "/",
 
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -19,6 +19,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-plugin-styled-components",
+    "gatsby-plugin-dts-css-modules",
     "gatsby-transformer-sharp", {
       resolve: 'gatsby-source-filesystem',
       options: {

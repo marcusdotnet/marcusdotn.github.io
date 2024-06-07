@@ -7,7 +7,6 @@ import ProjectViewDetails from "../../components/ProjectViewDetails";
 import * as styles from "./ProjectsSection.module.css";
 import { isMobile } from "react-device-detect";
 import MobileProjectCarousel from "../../components/MobileProjectCarousel";
-import CarouselContext from "../../contexts/CarouselContext";
 
 
 interface FilterButtonProps {
@@ -75,19 +74,20 @@ export default function ProjectsSection() {
         {!isMobile && categoryProjects.length > 3 && (
             !isExpanded ? 
             (
-            <Button btnType="filledPrimary" onClick={() => setIsExpanded(true)}>SHOW MORE</Button>
+            <Button BtnType="filledPrimary" onClick={() => setIsExpanded(true)}>SHOW MORE</Button>
             ) :
             (
-            <Button btnType="transparentWhiteborder" onClick={() => setIsExpanded(false)}>SHOW LESS</Button>
+            <Button BtnType="transparentWhiteborder" onClick={() => setIsExpanded(false)}>SHOW LESS</Button>
             )
         )}
 
 
-        {activeProjectId != null && (
-            <ProjectViewDetails project={projects[activeProjectId]} onClose={() => {
-                setActiveProjectId(null);
-                setVisibleProjects([...visibleProjects]);
-            }} />
-        )}
+
+        <ProjectViewDetails 
+        project={activeProjectId != null ? projects[activeProjectId] : null} 
+        onClose={() => {
+            setActiveProjectId(null);
+            setVisibleProjects([...visibleProjects]);
+        }} />
     </Section>
 }   

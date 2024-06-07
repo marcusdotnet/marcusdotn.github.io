@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "rm -rf ./public; gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -22,6 +22,7 @@
     "deepmerge": "^4.3.1",
     "formik": "^2.4.6",
     "gatsby": "^5.13.3",
+    "gatsby-plugin-dts-css-modules": "^3.0.0",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-layout": "^4.13.1",
     "gatsby-plugin-postcss": "^6.13.1",
