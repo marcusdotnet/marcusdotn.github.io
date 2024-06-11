@@ -10,6 +10,12 @@ import tthkApi1 from "./images/projects/tthkapi_1.png";
 import tthkApi2 from "./images/projects/tthkapi_2.png";
 import tthkApi3 from "./images/projects/tthkapi_3.png";
 
+import taskly1 from "./images/projects/taskly_1.png";
+import taskly2 from "./images/projects/taskly_2.png";
+import taskly3 from "./images/projects/taskly_3.png";
+import taskly4 from "./images/projects/taskly_4.png";
+import taskly5 from "./images/projects/taskly_5.png";
+
 import htmlLogo from "./images/logo_html.png";
 import desktopLogo from "./images/logo_desktop.png";
 import figmaLogo from "./images/logo_figma.png";
@@ -47,12 +53,18 @@ const config: {
     ],
     PROJECTS: [
         {
-            title: "Super Pumpkin",
-            category: "Games",
-            link: "https://makud3v.itch.io/super-pumpkin",
-            description: `Super Pumpkin is a game written entirely in Lua, using the LÖVE framework. The game obviously took some inspiration from Super Mario but every piece of content for the game was created from scratch, to have just a little bit of originality.
-            Honestly it's just some mess I cooked up for TTHK's first Game Jam event and I had fun making it, even if I could've done it way better now that I think about it.`,
-            images: [superPumpkin1, superPumpkin2, superPumpkin3, superPumpkin4]
+            title: "Taskly",
+            category: "Mobile Development",
+            description: `Taskly is a mobile application that runs on both iOS and Android, 
+            which allows for you to keep track of your tasks for the day and any other day if you wish. I was inspired to develop it upon discovering PocketBase and just NEEDED to find a reason to use it somewhere.`,
+            images: [taskly1, taskly2, taskly3, taskly4, taskly5],
+            tags: [
+                {
+                    text: "Coming soon",
+                    bgColor: "#8A30FF",
+                    textColor: "white"
+                }          
+            ]
         },
         {
             title: "TTHK Timetable API",
@@ -61,6 +73,14 @@ const config: {
             description: `This is the unofficial, open source API to retrieve public timetable related information for Tallinn Industrial Education Center.
             Timetable data is fetched from EduPage's public endpoints at configurable intervals and interpreted to make it easier to work with without being authenticated.`,
             images: [tthkApi1, tthkApi2, tthkApi3]
+        },
+        {
+            title: "Super Pumpkin",
+            category: "Games",
+            link: "https://makud3v.itch.io/super-pumpkin",
+            description: `Super Pumpkin is a game written entirely in Lua, using the LÖVE framework. The game obviously took some inspiration from Super Mario but every piece of content for the game was created from scratch, to have just a little bit of originality.
+            Honestly it's just some mess I cooked up for TTHK's first Game Jam event and I had fun making it, even if I could've done it way better now that I think about it.`,
+            images: [superPumpkin1, superPumpkin2, superPumpkin3, superPumpkin4]
         }
     ],
     SKILLS: [
@@ -101,12 +121,19 @@ const config: {
 }
 
 
+interface ProjectTag {
+    text: string
+    textColor?: string
+    bgColor?: string
+}
+
 export interface Project {
     title: string
     category: string
     description?: string
     link?: string
     images: string[]
+    tags?: ProjectTag[]
 }
 
 export interface Experience {

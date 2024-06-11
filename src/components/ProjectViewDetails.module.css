@@ -103,11 +103,14 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+    align-items: center;
 }
 
 .gallery_image {
-    width: 100%;
+    width: 75%;
     height: auto;
+    max-height: 75vh;
+    object-fit: contain;
 }
 
 .project_view_title {
@@ -135,6 +138,7 @@
         flex-direction: column;
         width: 100%;
         padding: 2rem;
+        overflow: scroll;
     }
 
     .project_details_container {
